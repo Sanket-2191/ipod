@@ -17,7 +17,7 @@ class App extends Component {
         songs: <FontAwesomeIcon icon={fas.faMusic} size="2xl" style={{ color: "#ee91dd", }} />,
         games: <FontAwesomeIcon icon={fas.faGamepad} size="2xl" style={{ color: "#0c3279", }} />,
         settings: <FontAwesomeIcon icon={fas.faGear} size="2xl" style={{ color: "#75777a", }} />,
-        Volume: <FontAwesomeIcon icon={fas.faVolumelow} size="2xl" style={{ color: "#e7eb14", }} />,
+        Volume: <FontAwesomeIcon icon="fa-solid fa-volume-low" size="2xl" style={{ color: "#FFD43B", }} />,
         Themes: <FontAwesomeIcon icon={fas.faPalette} size="2xl" style={{ color: "#e85454", }} />
       },
       currOption: 1,
@@ -30,7 +30,7 @@ class App extends Component {
 
   switchOption(id) {
     this.setState({ currOption: id });
-    console.log(this.state.menu[this.state.currOption]);
+    // console.log(this.state.menu[this.state.currOption]);
 
   }
 

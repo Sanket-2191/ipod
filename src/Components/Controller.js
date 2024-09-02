@@ -15,7 +15,8 @@ export default class Controller extends Component {
     }
 
     handlePointerDown = (e) => {
-        this.setState({ isDragging: true, startY: e.clientY });
+        const { showMenu } = this.props;
+        if (showMenu) this.setState({ isDragging: true, startY: e.clientY });
     }
 
     handlePointerMove = (e) => {
@@ -57,7 +58,8 @@ export default class Controller extends Component {
     handleSelect = (e) => {
         e.stopPropagation(); // Stops the event from propagating to parent elements
         // console.log('Inner div clicked, event propagation stopped.');
-        this.menuVisiblity();
+        const { showMenu } = this.props;
+        if (showMenu) this.menuVisiblity();
     }
 
     menuVisiblity = () => {
